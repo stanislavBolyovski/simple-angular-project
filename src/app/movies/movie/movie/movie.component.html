@@ -1,0 +1,37 @@
+<div class="movie">
+    <div class="header">
+        <div>
+            <h1 class="movieTitle">{{currentMovie.name}}</h1>
+        </div>
+        <div>
+            <ul class="info">
+                <li>{{currentMovie.premiered}}</li>
+                <li *ngIf="currentMovie.runtime">{{currentMovie.runtime}} mins</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="movieDetail">
+        <div class="imgDetail">
+            <img src="{{currentMovie.image.original}}" alt="">
+            <i class="fa-solid fa-heart"  (click)="addToFav()"></i>
+        </div>
+        <div class="descriptionDetail">
+            <div>
+                <div class="categories" *ngFor="let item of
+                    currentMovie.genres">
+                    <button class="movieCategory">{{item}}</button>
+                </div>
+                <div>
+                    <p>{{currentMovie.summary}}</p>
+                </div>
+            </div>
+            <div>
+                <button class="back" (click)= 'goBack()'>Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="message" *ngIf="isThere">
+    <p>{{message}}</p>
+</div>

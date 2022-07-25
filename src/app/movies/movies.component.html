@@ -1,0 +1,26 @@
+<div class="movieContainer">
+    <div class="searchContainer">
+        <form class="searchMovies">
+            <div class="searchField">
+                <input name="searched" type="text" placeholder="Search for TV-series" [(ngModel)]="searched">
+                <button (click)="searchMovies(searched)"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a class="watchlist" [routerLink]="['/favourites']" >
+                <i class="fa-solid fa-clapperboard"></i>
+                <a>Watchlist</a>
+            </a>
+        </form>
+    </div>
+    <div class="movieList">
+        <div *ngFor="let movie of movies">
+            <div class="movie" *ngIf="movie.show.image">
+                <a [routerLink]="['/movie', movie.show.id]">
+                    <p class="movieTitle">{{movie.show.name}}</p>
+                <div class="img">
+                    <img src="{{movie.show.image.original}}"> 
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>

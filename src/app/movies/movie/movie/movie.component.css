@@ -1,0 +1,95 @@
+* {
+    font-size: 20px;
+}
+
+.movieTitle {
+    font-size: 40px;
+}
+
+ul {
+    padding: 0px;
+}
+
+.info li {
+    list-style: none;
+    margin-right: 1rem;
+    font-size: 18px;
+}
+
+.info {
+    display: flex;
+}
+
+img {
+    width: 400px;
+    margin-right: 1rem;
+}
+
+.movieDetail {
+    width: 80vw;
+    display: flex;
+    flex-flow: row;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #853841;
+    padding: 1rem;
+}
+
+.movieCategory {
+    padding: .3rem .8rem;
+    border-radius: 1rem;
+    background-color: #521618;
+    color: white;
+    border: none;
+    margin: .2rem
+}
+
+.back {
+    color: white;
+    width: 20%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #521618;
+}
+
+.descriptionDetail {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgDetail {
+    position: relative;
+}
+
+.fa-heart{
+    border-bottom-right-radius: 0.2rem;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    left: 0px;
+    font-size: 3rem;
+}
+
+.fa-heart:hover{
+    opacity: 0.5;
+}
+
+.message {
+    position: absolute;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 15rem;
+    min-height: 5rem;
+    background-color: white;
+    top: 1rem;
+    right: 1rem;
+}

@@ -1,0 +1,12 @@
+<div class="movieContainer">
+    <div class="movieList">
+        <div *ngFor="let movie of fav">
+            <div class="movie" *ngIf="movie.image">
+                <p class="movieTitle">{{movie.name}}</p>
+                <div class="img">
+                    <img src="{{movie.image.original}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

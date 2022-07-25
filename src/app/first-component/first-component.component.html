@@ -1,0 +1,44 @@
+<div class="formDiv">
+    <form class="createHeroForm">
+        <h3>Create hero</h3>
+        <input type="text" placeholder="Hero name"
+            [(ngModel)]= 'heroName' name='heroName'>
+
+        <input type="number" placeholder="Hero age"
+            [(ngModel)]= 'heroAge' name='heroAge'>
+
+        <input type="string" placeholder="Image URL"
+            [(ngModel)]= 'imgUrl' name='imgUrl'>
+        <button type="submit" (click)= 'createHero()'>Create hero</button>
+    </form>
+</div>
+<div class="heroListContainer">
+    <div>
+
+        <div class="searchForm">
+            <div>
+                <input type="text"
+                    [(ngModel)]= 'search' name='search' placeholder="Search for hero">
+            </div>
+            <button (click)="searchHero()">Search</button>
+        </div>
+
+        <div class="heroList">
+            <div class="card" *ngFor="let hero of searched">
+                <div>
+                    <img [src]="hero.imgSrc">
+                </div>
+                <div>
+                    <h3>{{hero.name}}</h3>
+                    <label>{{hero.age}} years old</label>
+                    <button *ngIf='!randomClicked'
+                        (click)="removeItem(hero.name)">Remove</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="message" *ngIf="display">
+    <p>{{message}}</p>
+</div>
